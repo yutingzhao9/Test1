@@ -33,7 +33,6 @@ public class StudentServiceImpl implements StudentService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     public void deleteTeacher(String teacherId){
-        System.out.println("");
         //1、根据id删除老师
         studentMapper.deleteTeacher(teacherId);
         //2、根据创建日期挑选出资历最老教师id
